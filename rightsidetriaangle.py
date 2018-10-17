@@ -2,10 +2,9 @@
 
 from __future__ import print_function
 
-num =5
-z = num
+z = int(input("enter a number"))
 # to create row
-for i in range(0,num):
+for i in range(0,z):
     # to create column fron space
     for j in range(0,z-1):
         print(" ", end=" ")
