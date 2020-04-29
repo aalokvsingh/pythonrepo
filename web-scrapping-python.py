@@ -31,3 +31,21 @@ with open(filename,'w') as f:
     for link in links:
         w.writerow(link)
     
+    
+    ''' output of file rkdlink.txt
+    
+    https://www.repairkidukan.com/services/acrepairing,AC Repair Service
+https://www.repairkidukan.com/services/washingmachine,Washing Machine Service
+https://www.repairkidukan.com/services/fridge,Fridge Repair Service
+https://www.repairkidukan.com/services/microwave-oven,Microwave Oven Repair Service
+https://www.repairkidukan.com/services/lift-repair-service,Lift Repair Service
+https://www.repairkidukan.com/services/electricalworks,Electrical Works
+https://www.repairkidukan.com/services/plumbing,Plumber Service
+https://www.repairkidukan.com/services/homepainting,Painting Service
+https://www.repairkidukan.com/services/computers,Desktop/Laptop Sales & Service
+https://www.repairkidukan.com/services/sofarepair,Sofa Repair & Cleaning
+https://www.repairkidukan.com/customerbenifits,Customer Benefits
+https://www.repairkidukan.com/faq,FAQ
+https://www.repairkidukan.com/contact,Contact
+https://www.repairkidukan.com/affliate,Affliate
+'''
