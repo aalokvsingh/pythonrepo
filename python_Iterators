@@ -1,0 +1,83 @@
+Technically, in Python iterator is an object of a class which consist of __iter__() and __next__() methods.
+Iterator are everywhere, you have come accross them in some or other programs.
+Iterator object allow us to traverse through all the items in an itarable, which will return data, one element at a time.
+Lists, tuples, dictionaries,string and sets are all iterable objects. They are iterable containers from which we can get an iterator.
+The for loop actually creates an iterator object internally and executes the next() method for each loop.
+
+E.g:
+Return an iterator from a list, and print each value:
+my_list = ("apple", "banana", "cherry")
+my_iterator = iter(my_list)
+type(my_list)
+type(my_iterator)
+print(next(my_iterator))
+print(next(my_iterator))
+print(next(my_iterator))
+o/p
+<class 'list'>
+<class 'list_iterator'>
+apple
+banana
+cherry
+
+Building Our own Iterators to get positive number below number 10.
+class my_iter:
+    def __init__(self):
+        self.limit = 20
+
+    def __iter__(self):
+        self.n = 0  
+        return self
+
+    def __next__(self):
+        print("n value is : ",self.n)
+        if self.n < self.limit:
+            print("n is less than 10")
+            self.n += 2
+            return self.n
+        else:
+            print("n is greater than 10")
+            raise StopIteration
+
+my_object = my_iter()
+
+myiter = iter(my_object)
+print("======Starts================")
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+print(next(myiter))
+
+o/p:
+
+======Starts================
+n value is :  0  
+n is less than 10
+2
+n value is :  2  
+n is less than 10
+4
+n value is :  4
+n is less than 10
+6
+n value is :  6
+n is less than 10
+8
+n value is :  8
+n is less than 10
+10
+n value is :  10
+n is less than 10
+12
+n value is :  12
+n is less than 10
+14
+n value is :  14
+n is less than 10
+16
+==================ends==============
+
